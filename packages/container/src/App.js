@@ -3,7 +3,7 @@ import MarketingApp from "./components/MarketingApp";
 const App = () => {
   return (
     <div>
-      <h3>Texto del contenedor microfrontends</h3>
+      <h3>Texto del contenedor  de microfrontends</h3>
       <hr />
       <MarketingApp />
     </div>
