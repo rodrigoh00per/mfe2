@@ -9,16 +9,14 @@ import Pricing from "./components/Pricing";
 
 const generateClassName = createGenerateClassName({ productionPrefix: "ma" });
 const App = () => (
-  <div>
-    <StylesProvider generateClassName={generateClassName}>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/pricing" component={Pricing} />
-          <Route path="/" component={Landing} />
-        </Switch>
-      </BrowserRouter>
-    </StylesProvider>
-  </div>
+  <StylesProvider generateClassName={generateClassName}>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/pricing" component={Pricing} />
+        <Route path="/" component={Landing} />
+      </Switch>
+    </BrowserRouter>
+  </StylesProvider>
 );
 
 export default App;
