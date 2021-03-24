@@ -1,8 +1,8 @@
-import { mount } from "marketing/MarketingApp";
+import { mount } from "auth/AuthApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-const MarketingApp = () => {
+const AuthApp = ({ onSignIn }) => {
   const ref = useRef(null);
   const history = useHistory();
 
@@ -15,6 +15,7 @@ const MarketingApp = () => {
           history.push(nexPathname);
         }
       },
+      onSignIn,
     });
     /* este es para llamar solo la primera vez  ya que no se ejecuta el listen */
     /*     onParentNavigate(history.location); */
@@ -23,4 +24,4 @@ const MarketingApp = () => {
   return <div ref={ref} />;
 };
 
-export default MarketingApp;
+export default AuthApp;
