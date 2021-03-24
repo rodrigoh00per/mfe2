@@ -8,7 +8,9 @@ const mount = (el, { onNavigate, onSignIn, defaultHistory, initialPath }) => {
   const history =
     defaultHistory || createMemoryHistory({ initialEntries: [initialPath] });
   /* esta funcion es para informarle al papa de hey cambie ! */
-  if (onNavigate) history.listen(onNavigate);
+  if (onNavigate) {
+    history.listen(onNavigate);
+  }
   ReactDOM.render(<App history={history} onSignIn={onSignIn} />, el);
 
   return {
